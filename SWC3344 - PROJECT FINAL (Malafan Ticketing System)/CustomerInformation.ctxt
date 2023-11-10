@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=CustomerInformation
+comment1.params=custId\ custName
+comment1.target=CustomerInformation(java.lang.String,\ java.lang.String)
+comment10.params=
+comment10.target=java.lang.String\ toString()
+comment2.params=ticket
+comment2.target=void\ addItem(TicketInformation)
+comment3.params=
+comment3.target=java.lang.String\ getCustId()
+comment4.params=
+comment4.target=java.lang.String\ getCustName()
+comment5.params=
+comment5.target=int\ getTicketId()
+comment6.params=
+comment6.target=void\ incrementCounterPaid()
+comment7.params=
+comment7.target=java.util.List\ getPurchasedTickets()
+comment8.params=
+comment8.target=int\ getCounterNumber()
+comment9.params=counterNumber
+comment9.target=void\ setCounterNumber(int)
+numComments=11

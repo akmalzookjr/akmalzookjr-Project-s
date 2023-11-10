@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=TicketInformation
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ CustomerInformation\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=ticketId\ rideName\ ticketPrice\ purchaseDate\ purchasedQuantity
+comment1.target=TicketInformation(int,\ java.lang.String,\ int,\ java.lang.String,\ int)
+comment2.params=
+comment2.target=int\ getTicketId()
+comment3.params=
+comment3.target=java.lang.String\ getRideName()
+comment4.params=
+comment4.target=int\ getTicketPrice()
+comment5.params=
+comment5.target=java.lang.String\ getPurchaseDate()
+comment6.params=
+comment6.target=int\ getPurchasedQuantity()
+numComments=7
