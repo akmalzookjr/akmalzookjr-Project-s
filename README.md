@@ -1,2 +1,2 @@
 # akmalzookjr-Project-s
-saving all my projocets
+saving all my small projects
