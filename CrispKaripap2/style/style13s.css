@@ -1,0 +1,872 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background: #e4e9f7;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+/* Login */
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+.box{
+    background: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+                0 32px 64px -48px rgba(0,0,0,0.5);
+}
+.form-box{
+    width: 450px;
+    margin: 0px 10px;
+}
+.form-box header{
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 10px;
+}
+.form-box form .field{
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+
+}
+.form-box form .input input{
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.btn{
+    height: 35px;
+    background: rgba(76,68,182,0.808);
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .3s;
+    margin-top: 10px;
+    padding: 0px 10px;
+}
+.btn:hover{
+    opacity: 0.82;
+}
+.submit{
+    width: 100%;
+}
+.links{
+    margin-bottom: 15px;
+}
+
+/* Home */
+
+.nav{
+    background: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    line-height: 60px;
+    z-index: 100;
+    transition: all .5s ease;
+    border-bottom: 1px solid #000;
+}
+.logo{
+    font-size: 25px;
+    font-weight: 900;
+    
+}
+.logo a{
+    text-decoration: none;
+    color: #000;
+}
+.logo img{
+    width: 100px;
+    top: 0;
+    left: 0;
+    margin-bottom: -40px;
+    margin-top: -20px;
+}
+.right-links{
+    flex-direction: row
+}
+.right-links a{
+    padding: 0 10px;
+}
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 10px;
+}
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 10px;
+    bottom: -2px;
+    width: 75%;
+    height: 3px;
+    background: rgb(0, 0, 0);
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.navigation > a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.cartdropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.cartbtn {
+    margin-right: -10px;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.cartbtn:hover {
+    color: rgb(0, 0, 0);
+}
+/* Arrow icon */
+.cartbtn::after {
+    content: "\25BE";
+    margin-left: 0px;
+}
+.cart-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.dropbtn {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.dropbtn:hover {
+    color: rgb(0, 0, 0);
+}
+/* Arrow icon */
+.dropbtn::after {
+    content: "\25BE";
+    margin-left: 0px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+.dropdown-content a {
+    color: rgb(0, 0, 0);
+    font-size: 0.8em;
+    font-weight: 500;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.5s ease;
+}
+.dropdown-content a:hover {
+    transform: scale(1.1);
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* CART */
+.cart-icon {
+    background-color: #8ac0ec;
+    border-radius: 50%;
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+.cartdropdown {
+    position: relative;
+    /* background-color: red; */
+}
+
+.cartdropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    /* background-color: #e96b6b; */
+    width: 500px; /* Adjust the width as needed */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 10px;
+    z-index: 1;
+}
+
+.cartdropdown .dropdown-content .cart-item p {
+    margin: 0;
+}
+
+.cartdropdown .dropdown-content .cart-item {
+    margin-bottom: 10px;
+}
+.cartdropdown .dropdown-content .cart-total {
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.cartdropdown .dropdown-content .checkout-btn {
+    background-color: #4c44b6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;/* Checkout page styles */
+}
+.cart-items,
+.payment-details {
+    width: 45%;
+}
+
+.cart-item-middle {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style for the delete button */
+.dropdown-content .cart-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.dropdown-content .cart-item .trash-icon {
+    display: flex;
+    flex-direction: row;
+    margin-right: 15px;
+}
+
+.delete-btn {
+    background: transparent;
+    border: none;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.delete-btn .fas {
+    width: 20px;
+}
+
+.delete-btn:hover {
+    color: darkred;
+}
+
+.payment-details .payment-form {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.payment-details .form-field {
+    margin-bottom: 15px;
+}
+
+.payment-details .form-field label {
+    font-weight: bold;
+}
+
+.payment-details .form-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-top: 5px;
+    position: relative;
+}
+
+.payment-details .done-btn .btn {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.payment-details .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4c44b6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.payment-details .btn:hover {
+    background-color: #372f94;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.cartdropdown .dropdown-content .checkout-btn:hover {
+    background-color: #372f94;
+}
+/* PROFILE */
+.profile-icon {
+    background-color: #8ac0ec;
+    border-radius: 50%;
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.logoutbtn{
+    height: 35px;
+    background: rgba(76,68,182,0.808);
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .3s;
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 0px 10px;
+}
+.logoutbtn:hover{
+    opacity: 0.82;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+.main-box{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.main-box .top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.bottom{
+    width: 100%;
+    margin-top: 20px;
+}
+@media only screen and (max-width:840px){
+    .main-box .top{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .top .box{
+        margin: 10px 10px;
+    }
+    .bottom{
+        margin-top: 0;
+    }
+}
+.message{
+    text-align: center;
+    background: #f9eded;
+    padding: 15px 0px;
+    border:1px solid #699053;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: red;
+}
+.section{
+    padding: 50px 20px 20px 20px;
+    min-height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-type: y mandatory;
+}
+.container{
+    max-width: 100%;
+    margin: auto;
+    height: 100vh;
+}
+
+/* SHOP-TOP */
+.shop-top{
+    display: flex;
+    flex-direction: column;
+    background-image: url('../Others/HD-Karipap.png');
+    background-position:center;
+    background-size: 1920px;
+    background-repeat: no-repeat;
+    min-height: 35vh;
+    border-bottom: 5px solid;
+}
+.shop-top .shop-top-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* background: red; */
+    margin-top: 80px;
+}
+.shop-top .shop-top-content h1{
+    font-size: 70px;
+}
+
+/* SHOP-MIDDLE */
+.shop-middle{
+    display: flex;
+    flex-direction: column;
+    background: lightsteelblue;
+}
+.shop-middle .head-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* background: red; */
+}
+.shop-middle .head-title .shop-top-content h1{
+    font-size: 50px;
+    margin-bottom: 50px
+}
+.shop-middle .head-title .shop-top-content .products-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 50px;
+}
+.product-image img {
+    width: 150px; /* Set the width to your desired size */
+    height: 150px; /* Set the height to your desired size */
+    object-fit: cover; /* Maintain aspect ratio and crop if necessary */
+
+}
+.shop-middle .head-title .shop-top-content .products-container .product-image{
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    padding: 20px 20px 20px 20px;
+}
+.shop-middle .head-title .shop-top-content .products-container .product-image h3{
+    font-size: 20px;
+    border-bottom: 2px solid black;
+    margin-bottom: 20px;
+}
+.addtocart{
+    background-color: #4c44b6; /* Background color */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px; /* Adjust padding as needed */
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+}
+.addtocart:hover {
+    background-color: #372f94; /* Change background color on hover */
+}
+
+/* CHECKOUT */
+
+/* Checkout page styles */
+.checkout-content {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    margin-top: 60px;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+.checkout-content h2{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.cart-items {
+    width: 45%;
+}
+
+.cart-item-middle {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style for the delete button */
+.dropdown-content .cart-item{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.dropdown-content .cart-item .trash-icon{
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: row;
+    margin-right: 15px;
+}
+.delete-btn {
+    background: transparent;
+    border: none;
+    color: red; /* Change the color of the X icon */
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+}
+.delete-btn .fas{
+    width: 20px;
+}
+
+.delete-btn:hover {
+    color: darkred; /* Change the color on hover */
+}
+
+.payment-details {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-details .payment-form {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    
+}
+
+.payment-details .form-field {
+    margin-bottom: 15px;
+}
+
+.payment-details .form-field label {
+    font-weight: bold;
+}
+
+.payment-details .form-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-top: 5px;
+    position: relative;
+}
+.payment-details .done-btn .btn{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.payment-details .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4c44b6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.payment-details .btn:hover {
+    background-color: #372f94;
+}
+
+/* PAYMENT_COMPLETED.PHP */
+.payment-completed{
+    display: flex;
+    flex-direction: column;
+    background-image: url('HD-Karipap2.png');
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.container .complete-top{
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.container .complete-top h2{
+    margin-top: 50px;
+    font-size: 50px;
+}
+.container .complete-top h3{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.container .complete-top .complete-box{
+    background-color: white;
+    border-radius: 25px;
+    padding: 20px 20px 20px 20px;
+    width: 50%;
+}
+.complete-cart-items h4{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.complete-cart-items p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.complete-cart-items-inside{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+                0 32px 64px -48px rgba(0,0,0,0.5);
+}
+.complete-payment-details{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.complete-content .done-btn{
+    /* background-color: red; */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.complete-content .done-btn .btn{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ORDER.PHP */
+.user-order{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+}
+.container .container-order{
+    /* background:red; */
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container .container-order h1{
+    font-size: 50px;
+    margin: 20px 20px;
+    color:white;
+}
+.container .container-order .order-box{
+    /* background-color: green; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 40px;
+}
+.container .container-order .order-box .order-box-details{
+    background-color: white;
+    width: 600px;
+    border-radius: 25px;
+    padding: 20px 20px 20px 20px;
+    box-shadow: 0 0 10px 0 black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+}
+.container .container-order .order-box .order-box-details:hover{
+    transform: scale(1.1);
+}
+.container .container-order .order-box .order-box-details h2{
+    margin-bottom: 5px;
+}
+.container .container-order .order-box .order-box-details .order-gap{
+    margin-top: 5px;
+}
+
+/* ADD PRODUCT */
+/* Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fdfdfd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    width: 300px; /* Adjust width */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Form Label */
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Form Input */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+/* Submit Button */
+.submit {
+    background-color: rgba(76,68,182,0.808);
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit:hover {
+    background-color: rgba(76,68,182,1);
+}
+
+.edit-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: green; /* Set the color to green */
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-left: 5px; /* Adjust spacing as needed */
+}
